@@ -1,0 +1,34 @@
+#header {
+  margin-top: 20px;
+}
+
+.rate-box > .row {
+  border: 1px solid #333;
+  margin-bottom: 15px;
+  padding: 10px 40px 5px 42px;
+  position: relative;
+}
+
+.text-lenda {
+  font-size: 24px;
+  color: #0BBC73;
+}
+
+p {
+  font-size: 14px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+}
+
+.number {
+  background: url('https://cdn.glitch.com/4b63a218-7df4-4d7a-9356-520d4434850e%2Fnumbers.png?1493854410212');
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

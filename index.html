@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://lush-mirror.glitch.me/ -->
+<html ng-app='lendaApp'>
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Lenda Quotes</title>
+    <meta name="description" content="Quotes from Lenda">
+    <link id="favicon" rel="icon" href="https://lenda.com/favicon.ico" type="image/x-icon">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller='rateQuoteController as rateQuote' cz-shortcut-listen="true">
+    <section id="header">
+      <div class="container">
+        <h1 class="text-center">Lenda Quotes</h1>
+        <hr>
+    </div></section>
+
+    <section id="quotes">
+      <div class="container">
+        <div class="rate-box">
+           <div class="row" ng-repeat='quote in rateQuote.quotes'>
+             <img class="number">
+             <div class="col-md-2">
+               <span class="text-lenda loan-amount">
+                 {{quote.loan_amount | currency: "$" : 0}}
+               </span>
+               <p>Loan Amount</p>
+             </div>
+
+             <div class="col-md-2">
+               <span class="text-lenda rate">
+                 {{quote.rate}}%
+               </span>
+               <p>
+                 <span class="apr">
+                   {{quote.apr}}%
+                 </span>
+                 APR
+               </p>
+             </div>
+
+             <div class="col-md-2">
+               <span class="text-lenda cash-to-close">
+                 {{rateQuote.Math.abs(rateQuote.getFeeTotal(quote.fees)) | currency: "$" : 0}}
+               </span>
+               <p>{{rateQuote.getFeeTotal(quote.fees) < 0 ? "Cash to you" : "Cash out of Pocket"}}</p>
+             </div>
+
+             <div class="col-md-2">
+               <span class="text-lenda monthly-payment">
+                 {{quote.principal_and_interest_payment | currency: "$" : 0}}
+               </span>
+               <p>Monthly P&amp;I Payment</p>
+             </div>
+
+             <div class="col-md-2">
+               <span class="text-lenda monthly-savings">
+                 {{quote.monthly_savings | currency: "$" : 0}}
+               </span>
+               <p>Monthly Savings</p>
+             </div>
+
+             <div class="col-md-2 action">
+               <a role='button' class='btn btn-success' href="https://lush-mirror.glitch.me/#">See My Rates</a>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+</body></html>
