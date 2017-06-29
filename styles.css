@@ -5,7 +5,7 @@
 .rate-box > .row {
   border: 1px solid #333;
   margin-bottom: 15px;
-  padding: 10px 40px 5px 42px;
+  padding: 10px 25px 5px 42px;
   position: relative;
 }
 
@@ -21,6 +21,7 @@ p {
 .action {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   margin-top: -10px;
 }
 
@@ -31,4 +32,28 @@ p {
   position: absolute;
   top: 0;
   left: 0;
+}
+.number-1 {
+  background-position: 0;
+}
+.number-2 {
+  background-position: -42px;
+}
+.number-3 {
+  background-position: -84px;
+}
+.number-4 {
+  background-position: -126px;
+}
+.number-5 {
+  background-position: -168px;
+}
+.number-6 {
+  background-position: -210px;
+}
+.number-7 {
+  background-position: -252px;
+}
+.number-8 {
+  background-position: -294px;
 }

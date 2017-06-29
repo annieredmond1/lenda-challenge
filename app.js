@@ -7,15 +7,12 @@ lendaApp.controller('rateQuoteController', ['quoteService', '$window', function(
   vm.Math = window.Math;
   vm.assignQuotes = assignQuotes;
   vm.getFeeTotal = getFeeTotal;
-  vm.hello = 'hello';
 
   assignQuotes();
-  console.log('in controller');
 
   function assignQuotes() {
     quoteService.getQuotes()
       .then(function(response) {
-        console.log('response', response);
         vm.quotes = response.data.quotes;
       })
       .catch(function(error) {

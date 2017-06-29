@@ -26,7 +26,7 @@
       <div class="container">
         <div class="rate-box">
            <div class="row" ng-repeat='quote in rateQuote.quotes'>
-             <img class="number">
+             <img class="number {{'number-' + (rateQuote.quotes.indexOf(quote) + 1)}}">
              <div class="col-md-2">
                <span class="text-lenda loan-amount">
                  {{quote.loan_amount | currency: "$" : 0}}
